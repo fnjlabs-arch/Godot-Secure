@@ -1,13 +1,13 @@
-# Godot Secure - Enhanced Asset Protection For Godot
+# SadSha Game Guard - Enhanced Asset Protection For Godot
 [![Godot Engine 4.4.x](https://img.shields.io/badge/Godot_Engine-4.4.x-blue)](https://godotengine.org/)
-[![MIT License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/KnifeXRage/Godot-Secure/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/fnjlabs-arch/Godot-Secure/blob/main/LICENSE)
 <a href='https://ko-fi.com/V7V41FR21F' target='_blank'><img height='21' style='border:0px;height:21px;' src='https://storage.ko-fi.com/cdn/kofi5.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-![Godot Secure Logo](/Logos/PNGs/Godot%20Secure.png)
+![SadSha Game Guard Logo](/Logos/PNGs/SadSha%20Game%20Guard.png)
 
 ## Description
 
-**Godot Secure** is a Simple Python Script That modify the Godot Source Code Automatically, to integrate **Camellia-256 / AES-256** encryption with a **unique security token system**. This solution creates a cryptographically **unique engine build** that prevents generic decryption tools from accessing your game assets.
+**SadSha Game Guard** is a Simple Python Script That modify the Godot Source Code Automatically, to integrate **Camellia-256 / AES-256** encryption with a **unique security token system**. This solution creates a cryptographically **unique engine build** that prevents generic decryption tools from accessing your game assets.
 
 ### *Effortless Security for Godot Games*
 >This script enhances your Godot engine with Camellia/AES encryption and a unique security token system with just one command. Unlike standard encryption, this creates a custom Godot build that's cryptographically unique to you, preventing universal decryption tools from working with your game assets.
@@ -24,7 +24,7 @@
 
 Standard Godot encryption has known vulnerabilities. Our solution:
 
-| Feature | Standard Godot | Godot Secure |
+| Feature | Standard Godot | SadSha Game Guard |
 |---------|----------------|--------------|
 | Encryption Algorithm | AES-256 | Camellia-256 / AES-256 |
 | Universal Decryption Tools | Vulnerable | **Protected** |
@@ -40,7 +40,7 @@ Standard Godot encryption has known vulnerabilities. Our solution:
 3. **OpenSSL** (for key generation) `Optional`
 4. **Build Tools** (SCons, compilers)
 
-## Download Godot Secure: 🔗[Download](https://github.com/KnifeXRage/Godot-Secure/releases/)
+## Download SadSha Game Guard: 🔗[Download](https://github.com/fnjlabs-arch/Godot-Secure/releases/)
 
 
 #### Pro Tip:
@@ -77,13 +77,13 @@ $env:SCRIPT_AES256_ENCRYPTION_KEY = Get-Content godot.gdkey
 
 ### Step 3: Run Setup Script
 > You Can the Script directly inside Godot Source folder without using arguments!
-> Using: `python godot_secure.py`
+> Using: `python "SadSha Game Guard AES-256 Universal v6.py"`
 ```bash
-# Run The Godot Secure Script
-python godot_secure.py /path/to/godot_source/
+# Run The SadSha Game Guard Script
+python "SadSha Game Guard AES-256 Universal v6.py" /path/to/godot_source/
 
 #Example:
-python godot_secure.py godot/
+python "SadSha Game Guard AES-256 Universal v6.py" godot/
 ```
 
 ### Step 4: Compile Godot Engine and Export Templates
@@ -144,7 +144,7 @@ The script makes these key modifications:
 
 File backups are created automatically, to restore them to their original version:
 
-Run the `restore_backup.py` script located in `utils` folder.
+Run the `restore_backup.py` script located in the `SadSha Game Guard Scripts/utils` folder.
 
 ## Troubleshooting
 
@@ -152,12 +152,12 @@ Run the `restore_backup.py` script located in `utils` folder.
 - Ensure Python 3.10+ installed
 - Verify correct Godot source path
 - Run with absolute path if needed:  
-  `python godot_secure.py /path/to/godot_source`
+  `python "SadSha Game Guard AES-256 Universal v6.py" /path/to/godot_source`
 
 **Compilation errors?**
 - Clean build: `scons --clean`
 - Ensure all submodules: `git submodule update --init`
-- Use `Godot-Secure` Script only once on _Godot Source Code_. Using script multiple times on same source code can cause **Compilation Errors!**. So, always refresh Your Godot source code before running the script on it.
+- Use `SadSha-Game-Guard` Script only once on _Godot Source Code_. Using script multiple times on same source code can cause **Compilation Errors!**. So, always refresh Your Godot source code before running the script on it.
 
 ### Common Issues
 1. **File not found errors**: Ensure correct Godot source path
@@ -196,7 +196,7 @@ This script modifies core Godot engine files. Always:
 
 # License
 - MIT License - Free for Personal and Commercial use with attribution: 
-🔗[View License](https://github.com/KnifeXRage/Godot-Secure/blob/main/LICENSE)
+🔗[View License](https://github.com/fnjlabs-arch/Godot-Secure/blob/main/LICENSE)
 ---
 
 ## 💖 Support Me

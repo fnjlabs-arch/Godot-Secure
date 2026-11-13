@@ -2,8 +2,8 @@ import os
 import sys
 
 
-## File Paths identical to those of the Godot-Secure scripts.
-## It is assumed that it may vary at some point in the version of Godot-Secure.
+## File Paths identical to those of the SadSha-Game-Guard scripts.
+## It is assumed that it may vary at some point in the version of SadSha-Game-Guard.
 
 MODIFICATIONS = [
     "version.py"
@@ -26,7 +26,7 @@ CAMELLIA = [
 
 SECURITY_TOKEN_PATH = "core/crypto/security_token.h"
 
-## Default Godot-Secure Log Colors
+## Default SadSha-Game-Guard Log Colors
 class LogColors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -38,7 +38,7 @@ class LogColors:
     UNDERLINE = '\033[4m'
 
 if __name__ == "__main__":
-    ## Default Godot-Secure Validations
+    ## Default SadSha-Game-Guard Validations
     godot_root = ""
 
     if len(sys.argv) == 1:

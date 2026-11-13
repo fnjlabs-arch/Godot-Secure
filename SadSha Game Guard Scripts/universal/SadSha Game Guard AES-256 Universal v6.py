@@ -200,7 +200,7 @@ def apply_buffer_scramble(filepath, buffer_seed):
     write_map_str = "static const uint8_t token_write_map[] = {" + ", ".join(map(str, scrambled_tokens)) + "};"
     read_map_str = "static const uint8_t token_read_map[] = {" + ", ".join(map(str, inverse_map)) + "};"
     map_injection = (
-        f"\n// Godot-Secure: Injected Token Maps (Auto-detected TK_MAX = {actual_tk_max})\n"
+        f"\n// SadSha-Game-Guard: Injected Token Maps (Auto-detected TK_MAX = {actual_tk_max})\n"
         f"{write_map_str}\n{read_map_str}\n"
     )
 
@@ -263,7 +263,7 @@ MODIFICATIONS = [] # Modification list (empty)
 fileCreated = True
 backup_path = None
 current_dt = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S-%f")
-logFileName = f"Log-{current_dt}-Godot-Secure-v6-AES.txt"
+logFileName = f"Log-{current_dt}-SadSha-Game-Guard-v6-AES.txt"
 
 # Backup Properties
 quiz_override = False
@@ -293,7 +293,7 @@ def start_setup():
         
 
     # Log File Creation
-    with open(logFileName, "w", encoding="utf-8") as logf: logf.write(f"Created On - {current_dt}\nThis is Godot-Secure Log file, SAVE IT to secure place for later getting values.\n\n")
+    with open(logFileName, "w", encoding="utf-8") as logf: logf.write(f"Created On - {current_dt}\nThis is SadSha-Game-Guard Log file, SAVE IT to secure place for later getting values.\n\n")
 
     # Check for required Godot source components
     core_dir = os.path.join(godot_root, "core")
@@ -316,7 +316,7 @@ def start_setup():
 
     print(save_log(f"\nUsing Godot Source Root: {godot_root}"))
     print(save_log(f"\nGodot Version Found (int): {get_godot_version(godot_root)} (Hint:- 46 means v4.6.x)"))
-    confirm = input(f"\n\n ⚠   {LogColors.WARNING}Start Godot Secure Operations on Godot Source Root {LogColors.ENDC}{LogColors.FAIL}(y/n)?{LogColors.ENDC}: ").strip().lower()
+    confirm = input(f"\n\n ⚠   {LogColors.WARNING}Start SadSha Game Guard Operations on Godot Source Root {LogColors.ENDC}{LogColors.FAIL}(y/n)?{LogColors.ENDC}: ").strip().lower()
     if not (confirm == 'y' or confirm == 'yes'):
         print(save_log("Closing Setup..."))
         try:
@@ -325,7 +325,7 @@ def start_setup():
             pass
         sys.exit(0)
         
-    save_log(f"Start Godot Secure Operations on Godot Source Root (y/n)?: {confirm}")
+    save_log(f"Start SadSha Game Guard Operations on Godot Source Root (y/n)?: {confirm}")
 
     confirm = input(f"\n\n ℹ  {LogColors.OKBLUE}Use Custom Headers {LogColors.ENDC}{LogColors.FAIL}(y/n)?{LogColors.ENDC}: ").strip().lower()
     save_log(f"\n[INFO] - Use Custom Headers (y/n)?: {confirm}")
@@ -401,12 +401,12 @@ def setup_modifications():
         # Step 1:
 
         "PS-1F": 'name = "Godot Engine"',
-        "PS-1R": 'name = "Godot Engine (With Godot Secure)"',
+        "PS-1R": 'name = "Godot Engine (With SadSha Game Guard)"',
 
         # Step 2:
         
         "PS-2F": 'set_title(TTR("Export"));',
-        "PS-2R": 'set_title(TTR("Export With Godot Secure (AES-256)"));',
+        "PS-2R": 'set_title(TTR("Export With SadSha Game Guard (AES-256)"));',
 
         # Step 3:
 
@@ -448,7 +448,7 @@ def setup_modifications():
     
     if godot_version_int >= 47:
         MODIFICATION_VALUES_DB["PS-2F"] = 'set_title(TTRC("Export"));'
-        MODIFICATION_VALUES_DB["PS-2R"] = 'set_title(TTRC("Export With Godot Secure (AES-256)"));'
+        MODIFICATION_VALUES_DB["PS-2R"] = 'set_title(TTRC("Export With SadSha Game Guard (AES-256)"));'
 
     # Modifications to be made in source
     MODIFICATIONS = [
@@ -460,7 +460,7 @@ def setup_modifications():
             "operations": [
                 {
                     "type": "replace_line",
-                    "description": "Modify Godot title To add Godot Secure",
+                    "description": "Modify Godot title To add SadSha Game Guard",
                     "find": MODIFICATION_VALUES_DB["PS-1F"],
                     "replace": MODIFICATION_VALUES_DB["PS-1R"]
                 }
@@ -474,7 +474,7 @@ def setup_modifications():
             "operations": [
                 {
                     "type": "replace_line",
-                    "description": "Modify Godot export popup title To add Godot Secure",
+                    "description": "Modify Godot export popup title To add SadSha Game Guard",
                     "find": MODIFICATION_VALUES_DB["PS-2F"],
                     "replace": MODIFICATION_VALUES_DB["PS-2R"]
                 }

@@ -97,7 +97,7 @@ def apply_buffer_scramble(filepath, buffer_seed):
     write_map_str = "static const uint8_t token_write_map[] = {" + ", ".join(map(str, scrambled_tokens)) + "};"
     read_map_str = "static const uint8_t token_read_map[] = {" + ", ".join(map(str, inverse_map)) + "};"
     map_injection = (
-        f"\n// Godot-Secure: Injected Token Maps (Auto-detected TK_MAX = {actual_tk_max})\n"
+        f"\n// SadSha-Game-Guard: Injected Token Maps (Auto-detected TK_MAX = {actual_tk_max})\n"
         f"{write_map_str}\n{read_map_str}\n"
     )
 
